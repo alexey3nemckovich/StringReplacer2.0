@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\StringReplacerFileTable">
+      <UniqueIdentifier>{d2c2f573-8647-4f2a-a6de-be8ad281185e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\StringReplacerFileTable">
+      <UniqueIdentifier>{16741010-d371-4b17-9da1-7370290a4fb4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\FileInfo">
+      <UniqueIdentifier>{18765348-0128-42f1-8265-f729c420d635}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\StringReplacerFileTable\Controls">
+      <UniqueIdentifier>{e782fa3b-f9e5-43d2-b526-4156d908921b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="StringReplacer2.0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MainFrm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ChildView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StringReplacerFileTable.h">
+      <Filter>Header Files\StringReplacerFileTable</Filter>
+    </ClInclude>
+    <ClInclude Include="IDGenerator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FileInfo.h">
+      <Filter>Header Files\FileInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="StringReplacerFileInfo.h">
+      <Filter>Header Files\FileInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="FileProcessingStatus.h">
+      <Filter>Header Files\FileInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="ContextMenu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Row.h">
+      <Filter>Header Files\StringReplacerFileTable\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="FileInfoRow.h">
+      <Filter>Header Files\StringReplacerFileTable\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="HeaderRow.h">
+      <Filter>Header Files\StringReplacerFileTable\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="StringReplacerFileTableControls.h">
+      <Filter>Header Files\StringReplacerFileTable\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="StringReplacer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="StringReplacer2.0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MainFrm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ChildView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StringReplacerFileTable.cpp">
+      <Filter>Source Files\StringReplacerFileTable</Filter>
+    </ClCompile>
+    <ClCompile Include="IDGenerator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HeaderRow.cpp">
+      <Filter>Source Files\StringReplacerFileTable</Filter>
+    </ClCompile>
+    <ClCompile Include="Row.cpp">
+      <Filter>Source Files\StringReplacerFileTable</Filter>
+    </ClCompile>
+    <ClCompile Include="FileInfoRow.cpp">
+      <Filter>Source Files\StringReplacerFileTable</Filter>
+    </ClCompile>
+    <ClCompile Include="ContextMenu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StringReplacer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Common.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="StringReplacer2.0.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\StringReplacer20.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ribbon1.mfcribbon-ms">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\StringReplacer2.0.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+</Project>
