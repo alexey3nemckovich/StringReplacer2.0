@@ -37,6 +37,7 @@ protected:
     afx_msg void OnRangeCmds(UINT);
     afx_msg LRESULT OnDeleteRow(WPARAM, LPARAM);
     afx_msg LRESULT OnAddRow(WPARAM, LPARAM);
+    afx_msg BOOL OnNotify(WPARAM, LPARAM, LRESULT*);
     DECLARE_MESSAGE_MAP()
     //size properties
 private:

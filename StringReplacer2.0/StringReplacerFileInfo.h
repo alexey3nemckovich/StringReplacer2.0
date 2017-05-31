@@ -16,7 +16,7 @@ struct StringReplacerFileInfo
         status = FILE_PROCESSING_STATUS::FILE_NOT_CHOSEN;
         countMacthes = 0;
     }
-    StringReplacerFileInfo(CString path, CString name)
+    StringReplacerFileInfo(const CString &path, const CString &name)
         : FileInfo(path, name)
     {
         status = FILE_PROCESSING_STATUS::FILE_CHOSEN;

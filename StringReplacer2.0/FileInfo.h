@@ -8,7 +8,7 @@ struct FileInfo
     CString name;
     CString fullPath;
     FileInfo() = default;
-    FileInfo(CString path, CString name)
+    FileInfo(const CString &path, const CString &name)
     {
         this->fullPath = path;
         this->name = name;

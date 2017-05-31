@@ -3,7 +3,7 @@
 
 
 template<class T>
-static void SortVector(vector<T>& v)
+static void SortVector(vector<T> &v)
 {
     for (int i = 0; i < v.size() - 1; i++)
     {
@@ -20,13 +20,13 @@ static void SortVector(vector<T>& v)
 }
 
 
-void StringReplacer::ProcessFile(string path, OnNewMatchCallback onNewMatch, OnFileProcessedCallback onFileProcessed)
+void StringReplacer::ProcessFile(const string &path, const string &word, OnNewMatchCallback onNewMatch, OnFileProcessedCallback onFileProcessed)
 {
     string str = ReadFileContent(path);
     vector<string> strs = DivideString(str);
     for (int i = 0; i < strs.size(); i++)
     {
-        strs[i] = DeleteWordFromString(strs[i], "123", onNewMatch);
+        strs[i] = DeleteWordFromString(strs[i], word, onNewMatch);
     }
     SortVector<string>(strs);
     onFileProcessed(strs);
@@ -34,7 +34,7 @@ void StringReplacer::ProcessFile(string path, OnNewMatchCallback onNewMatch, OnF
 }
 
 
-string StringReplacer::DeleteWordFromString(string str, string word, OnNewMatchCallback onNewMatch)
+string StringReplacer::DeleteWordFromString(string &str, const string &word, OnNewMatchCallback onNewMatch)
 {
     int pos;
     while (str.npos != (pos = str.find(word, 0)))
@@ -49,11 +49,11 @@ string StringReplacer::DeleteWordFromString(string str, string word, OnNewMatchC
 }
 
 
-vector<string> StringReplacer::DivideString(string str)
+vector<string> StringReplacer::DivideString(const string &str)
 {
     vector<string> strs;
-    string::iterator prevIt = str.begin();
-    string::iterator it;
+    string::const_iterator prevIt = str.begin();
+    string::const_iterator it;
     while (str.end() != (it = find(prevIt, str.end(), '\n')))
     {
         string newStr = str.substr(prevIt - str.begin(), it - prevIt);
@@ -70,7 +70,7 @@ vector<string> StringReplacer::DivideString(string str)
 }
 
 
-void StringReplacer::SaveStringsToFile(string path, vector<string> strs)
+void StringReplacer::SaveStringsToFile(const string &path, const vector<string> &strs)
 {
     ofstream fileStream;
     fileStream.open(path);
@@ -86,7 +86,7 @@ void StringReplacer::SaveStringsToFile(string path, vector<string> strs)
 }
 
 
-string StringReplacer::ReadFileContent(string path)
+string StringReplacer::ReadFileContent(const string &path)
 {
     ifstream t(path);
     return string(

@@ -10,7 +10,7 @@ class CStringReplacerFileTable::Row abstract
     : public CWnd
 {
 public:
-    virtual BOOL Create(CStringReplacerFileTable*, CRect &rect);
+    virtual BOOL Create(CStringReplacerFileTable*, const CRect &rect);
 public:
     typedef unique_ptr<CStringReplacerFileTable::Row> Ptr;
     Row() = default;

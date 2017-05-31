@@ -2,7 +2,7 @@
 #include "HeaderRow.h"
 
 
-BOOL CStringReplacerFileTable::HeaderRow::Create(CStringReplacerFileTable* table, CRect &rect, vector<CString> colsTexts)
+BOOL CStringReplacerFileTable::HeaderRow::Create(CStringReplacerFileTable* table, const CRect &rect, const vector<CString> &colsTexts)
 {
     if (!CStringReplacerFileTable::Row::Create(table, rect))
     {

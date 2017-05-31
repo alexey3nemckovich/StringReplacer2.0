@@ -10,7 +10,7 @@ BEGIN_MESSAGE_MAP(CStringReplacerFileTable::FileInfoRow, CWnd)
 END_MESSAGE_MAP()
 
 
-BOOL CStringReplacerFileTable::FileInfoRow::Create(CStringReplacerFileTable* table, CRect &rect, CString filePath/* = L""*/, CString fileName/* = L""*/)
+BOOL CStringReplacerFileTable::FileInfoRow::Create(CStringReplacerFileTable* table, const CRect &rect, const CString& filePath/* = L""*/, const CString &fileName/* = L""*/)
 {
     if (!CStringReplacerFileTable::Row::Create(table, rect))
     {
@@ -95,7 +95,7 @@ void CStringReplacerFileTable::FileInfoRow::SetFileOnProcess()
     {
         _process.join();
     }
-    _process = thread(&StringReplacer::ProcessFile, CStringToString(_fileInfo.fullPath), _onNewMatchCallback, _onFileProcessedCallback);
+    _process = thread(&StringReplacer::ProcessFile, CStringToString(_fileInfo.fullPath), string("123"), _onNewMatchCallback, _onFileProcessedCallback);
     _fileInfo.status = FILE_PROCESSING_STATUS::ON_PROCESS;
     UpdateRenderStatus();
 }
@@ -157,7 +157,7 @@ void CStringReplacerFileTable::FileInfoRow::OnDeleteRow()
 }
 
 
-void CStringReplacerFileTable::FileInfoRow::OnFileProcessed(vector<string> res)
+void CStringReplacerFileTable::FileInfoRow::OnFileProcessed(const vector<string> &res)
 {
     _fileInfo.processResult = res;
     _fileInfo.status = FILE_PROCESSING_STATUS::PROCESSED;
@@ -235,7 +235,6 @@ afx_msg void CStringReplacerFileTable::FileInfoRow::OnRButtonUp(UINT, CPoint poi
 {
     CRect rc;
     GetWindowRect(&rc);
-    _contextMenu->SetClickPos(point);
     if (_table->_rows.size() == _table->_visibleRowsCount - 1)
     {
         _contextMenu->EnableItem("add", false);

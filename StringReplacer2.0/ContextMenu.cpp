@@ -2,7 +2,7 @@
 #include "ContextMenu.h"
 
 
-CStringReplacerFileTable::ContextMenu::ContextMenu(CWnd*, map<string, pair<int, CString>> menuItems)
+CStringReplacerFileTable::ContextMenu::ContextMenu(CWnd*, const map<string, pair<int, CString>> &menuItems)
 {
     _menuItems = menuItems;
     CreatePopupMenu();
@@ -13,26 +13,14 @@ CStringReplacerFileTable::ContextMenu::ContextMenu(CWnd*, map<string, pair<int, 
 }
 
 
-void CStringReplacerFileTable::ContextMenu::SetClickPos(CPoint point)
-{
-    _point = point;
-}
-
-
-CPoint CStringReplacerFileTable::ContextMenu::GetLastClickPos()
-{
-    return _point;
-}
-
-
-void CStringReplacerFileTable::ContextMenu::EnableItem(string name, bool enable/* = true*/)
+void CStringReplacerFileTable::ContextMenu::EnableItem(const string &name, bool enable/* = true*/)
 {
     UINT val = enable ? MF_ENABLED : MF_DISABLED;
     EnableMenuItem(_menuItems[name].first, val);
 }
 
 
-int CStringReplacerFileTable::ContextMenu::operator[](string str)
+int CStringReplacerFileTable::ContextMenu::operator[](const string &str)
 {
     return _menuItems[str].first;
 }

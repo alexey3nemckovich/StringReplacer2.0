@@ -10,6 +10,7 @@ BEGIN_MESSAGE_MAP(CStringReplacerFileTable, CWnd)
     ON_MESSAGE(ADD_ROW_MSG, OnAddRow)
     ON_MESSAGE(DELETE_ROW_MSG, OnDeleteRow)
     ON_COMMAND_RANGE(MIN_ID, MAX_ID, OnRangeCmds)
+    //ON_NOTIFY()
 END_MESSAGE_MAP()
 
 
@@ -124,7 +125,6 @@ afx_msg void CStringReplacerFileTable::OnRButtonUp(UINT, CPoint point)
 {
     CRect rc;
     GetWindowRect(&rc);
-    _contextMenu->SetClickPos(point);
     if (_rows.size() == _visibleRowsCount - 1)
     {
         _contextMenu->EnableItem("add", false);
@@ -157,4 +157,11 @@ afx_msg LRESULT CStringReplacerFileTable::OnAddRow(WPARAM, LPARAM)
 {
     AddRow();
     return 0;
+}
+
+
+afx_msg BOOL CStringReplacerFileTable::OnNotify(WPARAM, LPARAM, LRESULT*)
+{
+    Beep(500, 100);
+    return TRUE;
 }

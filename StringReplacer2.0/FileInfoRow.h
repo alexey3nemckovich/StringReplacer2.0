@@ -15,7 +15,7 @@ class CStringReplacerFileTable::FileInfoRow
     :public Row
 {
 public:
-    virtual BOOL Create(CStringReplacerFileTable*, CRect &rect, CString filePath = L"", CString fileName = L"");
+    virtual BOOL Create(CStringReplacerFileTable*, const CRect &rect, const CString &filePath = L"", const CString &fileName = L"");
 public:
     //control interface
     typedef unique_ptr<FileInfoRow> Ptr;
@@ -38,7 +38,7 @@ private:
     void OnAction();
     void OnNewMatch();
     void OnDeleteRow();
-    void OnFileProcessed(vector<string>);
+    void OnFileProcessed(const vector<string>&);
     void UpdateRenderStatus();
 private:
     ContextMenuPtr _contextMenu;

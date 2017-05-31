@@ -10,7 +10,7 @@ class CStringReplacerFileTable::HeaderRow
     :public Row
 {
 public:
-    virtual BOOL Create(CStringReplacerFileTable*, CRect &rect, vector<CString> colsTexts);
+    virtual BOOL Create(CStringReplacerFileTable*, const CRect &rect, const vector<CString> &colsTexts);
 public:
     typedef unique_ptr<HeaderRow> Ptr;
     HeaderRow() = default;

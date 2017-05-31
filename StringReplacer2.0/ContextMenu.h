@@ -13,13 +13,13 @@ public:
     typedef unique_ptr<ContextMenu> Ptr;
     ContextMenu() = delete;
     ContextMenu(const ContextMenu&) = delete;
-    ContextMenu(CWnd*, map<string, pair<int, CString>>);
-    void EnableItem(string, bool = true);
+    ContextMenu(CWnd*, const map<string, pair<int, CString>>&);
+    void EnableItem(const string&, bool = true);
     virtual ~ContextMenu() = default;
-    void SetClickPos(CPoint);
-    CPoint GetLastClickPos();
-    int operator[](string str);
+    //void SetClickPos(CPoint);
+    //CPoint GetLastClickPos();
+    int operator[](const string &str);
 private:
-    CPoint _point;
+    //CPoint _point;
     map<string, pair<int, CString>> _menuItems;
 };

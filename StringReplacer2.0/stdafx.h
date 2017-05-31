@@ -33,4 +33,4 @@
 #define MAX_ID 65000
 #include "IDGenerator.h"
 
-string CStringToString(CString cstr);
+string CStringToString(const CString& cstr);

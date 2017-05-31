@@ -15,7 +15,7 @@ public:
 	virtual ~CChildView();
 
 protected:
-    virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
+    virtual BOOL PreCreateWindow(CREATESTRUCT &cs);
 	// Generated message map functions
 protected:
     afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);

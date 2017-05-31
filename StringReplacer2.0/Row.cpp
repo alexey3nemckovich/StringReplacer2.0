@@ -7,7 +7,7 @@ BEGIN_MESSAGE_MAP(CStringReplacerFileTable::Row, CWnd)
 END_MESSAGE_MAP()
 
 
-BOOL CStringReplacerFileTable::Row::Create(CStringReplacerFileTable *table, CRect &rect)
+BOOL CStringReplacerFileTable::Row::Create(CStringReplacerFileTable *table, const CRect &rect)
 {
     if (!CWnd::Create(
         NULL,
